@@ -37,4 +37,12 @@ export class UserVerificationComponent implements OnInit {
       this.errorHandlerService.getErrorCode(this.componentName, "InternalError");
     }
   }
+
+  onSignInWithGoogle() {
+    this.authService.googleSignIn().then(() => {
+    }).catch((err) => {
+      this.errorHandlerService.getErrorCode(this.componentName, "InternalError");
+      console.log(err);
+    });
+  }
 }
