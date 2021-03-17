@@ -15,7 +15,7 @@ exports.sendVerificationEmail = function(teamName, teamManagerEmail, teamDescrip
     },
   });
   return Promise.resolve(sendEmailPromise).then(() => {
-    console.log("Verification Email Sent Successfully!");
+    console.log("User Verification Email Sent Successfully!");
     return 0;
   })
       .catch((error) => {
